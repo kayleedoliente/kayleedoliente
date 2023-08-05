@@ -1,16 +1,26 @@
-### Hi there 👋
+# Hello, I'm Kaylee 👋
 
-<!--
-**kayleedoliente/kayleedoliente** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a student at UCI with a strong interest in UX/UI and front-end development. Welcome to my GitHub profile!
 
-Here are some ideas to get you started:
+## About Me
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 🎓 Studying Informatics with a specialization in Human-Computer Interaction.
+- 💼 Currently working as a Code Sensei at Code Ninjas.
+- 🌱 I'm constantly learning and improving my skills in Python and HTML/CSS.
+
+## Projects
+
+Coming soon!
+
+## Skills
+
+- Front-End Development: HTML, CSS, JavaScript
+- UX/UI Design: Figma
+
+## Connect with Me
+
+- LinkedIn: www.linkedin.com/in/kayleedoliente
+- Portfolio: kayleedoliente.github.io
+- Email: dolientk@uci,edu
+
+Feel free to explore my repositories and projects. If you have any questions or would like to collaborate, don't hesitate to reach out!

@@ -5,6 +5,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
 .navbar {
   background: #ffffff;
   height: 70px;
@@ -17,13 +25,18 @@
   z-index: 999;
 }
 
+#navbar__links .active {
+  color:            #F8F8F8;
+  background-color: #4f81bd;
+}
+
 .navbar__container {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 100%;
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
+  max-width: 130vw;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -198,6 +211,60 @@
   }
 }
 
+/* Mobile Responsive */
+
+@media screen and (max-width: 786px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 50%;
+  }
+
+  .main__content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main__content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .main__content h2 {
+    font-size: 3rem;
+  }
+
+  .main__content p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main__content h2 {
+    font-size: 2rem;
+  }
+
+  .main__content p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .main__btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}
+
 /* Hero section CSS */
 
 .main {
@@ -295,60 +362,6 @@
 }
 
 
-/* Mobile Responsive */
-
-@media screen and (max-width: 786px) {
-  .main__container {
-    display: grid;
-    grid-template-columns: auto;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 90vh;
-  }
-
-  .main__content {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .main__content h1 {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-  }
-
-  .main__content h2 {
-    font-size: 3rem;
-  }
-
-  .main__content p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .main__content h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
-  }
-
-  .main__content h2 {
-    font-size: 2rem;
-  }
-
-  .main__content p {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-  }
-
-  .main__btn {
-    padding: 12px 36px;
-    margin: 2.5rem 0;
-  }
-}
-
 /* Services Section CSS */
 
 .services {
@@ -357,6 +370,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  
 }
 s
 

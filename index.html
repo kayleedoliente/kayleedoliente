@@ -1,6 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <!-- Navbar highlights-->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+  console.log("sfgfg")
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext x='0' y='12' font-size='14' font-weight='bold'%>🌟%3C/text%3E%3C/svg%3E" type="image/svg+xml">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,33 +26,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="/" id="navbar__logo"> <i class="fas fa-gem"></i>Kaylee Doliente</a>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="/" class="navbar__links"> Works </a>
-          </li>
+<body>
+  <div id="nav-placeholder">
 
-          <li class="navbar__item">
-            <a href="html/Works/tech.html" class="navbar__links"> About </a>
-          </li>
-          <li class="navbar__item">
-            <a href="https://docs.google.com/document/d/1m-TFYKqWJzw-I7axck1v4iQzjLs8IBhG/edit?usp=sharing&ouid=101299823524517316439&rtpof=true&sd=true" class="navbar__links"> Resume </a>
-          </li>
-          <li class="navbar__btn">
-            <a href="html/ContactMe.html" class="button"> Contact Me </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  </div>
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("navbar/navbar.html");
+    });
+    </script>
+</body>
+</html>
 
     <!-- Hero section -->
     <div class="main">
@@ -83,7 +82,7 @@
   <footer>
     <p></p>
   </footer>
-    <script src="js/mobile-menu.js"></script>
     <script src="js/smooth-scroll.js"></script>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,8 +1,5 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+document.getElementById('scroll-to-receipt-bites').addEventListener('click', function () {
+    document.querySelector('.receipt-bites').scrollIntoView({
+        behavior: 'smooth'
     });
 });

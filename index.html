@@ -1,20 +1,24 @@
 <!DOCTYPE html>
+
 <html>
+  <html lang="en">
   <head>
+    <link rel="icon" href="https://icons8.com/icon/ISUiT4WYgBXg/k-key" type="image/x-icon">
+
     <!-- Navbar highlights-->
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>
-  console.log("sfgfg")
-    $(function(){
-        $('a').each(function(){
-            if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('active'); $(this).parents('li').addClass('active');
-            }
+    <script>
+      $(function () {
+        $("a").each(function () {
+          if ($(this).prop("href") == window.location.href) {
+            $(this).addClass("active");
+            $(this).parents("li").addClass("active");
+          }
         });
-    });
-</script>
+      });
+    </script>
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext x='0' y='12' font-size='14' font-weight='bold'%>🌟%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaylee Doliente</title>
@@ -23,66 +27,93 @@
       src="https://kit.fontawesome.com/9c35c567eb.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
-<body>
-  <div id="nav-placeholder">
-
-  </div>
-  <script>
-    $(function(){
-      $("#nav-placeholder").load("navbar/navbar.html");
-    });
+  <body>
+    <div id="nav-placeholder"></div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("navbar/navbar.html");
+      });
     </script>
-</body>
+  </body>
 </html>
 
-    <!-- Hero section -->
-    <div class="main">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>Hey! I'm Kaylee.</h1>
-          <h2></h2>
-          <p>
-            Second year Informatics student specializing in Human-Computer
-            Interaction at UC, Irvine.
-          </p>
-          <button class="main__btn"><a href="#work-section">See my work</a></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Services Section-->
-    <div class="services">
-      <div id="work-section">
-      <h1>Web Development</h1>
-      <div class="services__card">
-        <h2>Natalie Rose Music</h2>
-        <p></p>
-        <button>View Website</button>
-      </div>
-      <h1>Case Studies</h1>
-      <div class="services__container">
-        <div class="services__card">
-          <h2>ReceiptBites</h2>
-          <p>Design@UCI Project Teams</p>
-          <button>View Case Study</button>
-        </div>
-        <div class="services__card">
-          <h2>Sustidupe</h2>
-          <p>Design@UCI Project Teams</p>
-          <button>View Case Study</button>
-        </div>
-      </div>
+<!-- Hero section -->
+<div class="main">
+  <div class="main__container">
+    <div class="main__content">
+      <h1>Hey! I'm Kaylee.</h1>
+      <h2>Human-Computer Interaction @ UC Irvine</h2>
+      <p>
+        I strive for user-centric digital solutions that prioritize accessibility and inclusivity.
+      </p>
+      <button class="main__btn" id="scroll-to-receipt-bites">See my work</button>
     </div>
   </div>
+</div>
+
+<div class="separator">
+  <div class="separator__content">
+  <h1>At a Glance</h1>
+  </div>
+</div>
+
+<!--Case Studies Section-->
+
+<body>
+
+  <!-- Add the image carousel HTML here -->
+  <div class="carousel-wrapper">
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="images/bidkickz.png" alt="BidKickz quick glimpse photo.">
+    </div>
+    <div class="carousel-slide">
+      <video width="1080" height="720" controls>
+        <source src="images/natalierose.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+    </div>
+  </div>
+  <button id="prev-button">Previous</button>
+  <button id="next-button">Next</button>
+  </div>
+
+    <div class="receipt-bites" style="background-image: linear-gradient(to top, #fbcea9 0%, #fcebae 100%);"> <!-- Set the background color for each case study -->
+        <div class="receipt-bites__content">
+            <div class="receipt-bites__text">
+                <h2>ReceiptBites</h2>
+                <p>Scan. Cook. Delight. Transform the contents of your fridge into delicious recipes.</p>
+                <a href="html/ReceiptBites/index.html" class="button">View Case Study</a>
+                <a href="https://www.figma.com/proto/GAaMPny5mz1FR9cgxcogZ8/initial-layouts?type=design&node-id=0-1&t=SH6bh1x1KIubpqUQ-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=69%3A37&show-proto-sidebar=1" class="button">View Mockup</a>
+            </div>
+            <div class="receipt-bites__image">
+                <img src="images/ReceiptBites.png" alt="Case Study 1">
+            </div>
+        </div>
+    </div>
+
+
+
   <footer>
-    <p></p>
+    <div id="footer-placeholder"></div>
+    <script>
+      $(function () {
+        $("#footer-placeholder").load("footer/footer.html");
+      });
+    </script>
   </footer>
-    <script src="js/smooth-scroll.js"></script>
-    <script src="js/mobile-menu.js"></script>
-  </body>
+  
+<script src="js/smooth-scroll.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script src="js/carousel.js"></script>
+</body>
 </html>

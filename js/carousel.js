@@ -25,7 +25,7 @@ function nextSlide() {
     slideIndex = 0;
   }
   slides[slideIndex].style.display = 'block';
-  intervalId = setInterval(nextSlide, 10000);
+  //intervalId = setInterval(nextSlide, 10000);
 }
 
 function prevSlide() {
@@ -44,5 +44,5 @@ prevButton.addEventListener("click", prevSlide);
 // Show the first slide initially
 showSlide(slideIndex);
 
-// Automatically advance to the next slide every 6 seconds
-intervalId = setInterval(nextSlide, 10000);
+// Automatically advance to the next slide every 10 seconds
+//intervalId = setInterval(nextSlide, 10000);

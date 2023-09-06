@@ -1,5 +1,5 @@
-document.getElementById('scroll-to-receipt-bites').addEventListener('click', function () {
-    document.querySelector('.receipt-bites').scrollIntoView({
+document.getElementById('scroll-to-carousel-wrapper').addEventListener('click', function () {
+    document.querySelector('.carousel-wrapper').scrollIntoView({
         behavior: 'smooth'
     });
 });

@@ -263,9 +263,9 @@ body {
 
 .about-me__image img {
   flex: 1;
-    max-width: 100%;
+    width: 100%;
     border-radius: 30%;
-    max-height: 200px; /* Adjust the max height as needed */
+    height: 200px; 
 }
 
 

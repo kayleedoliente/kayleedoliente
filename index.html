@@ -50,6 +50,49 @@
   <div class="main__container">
     <div class="main__content">
       <h1>Hey! I'm Kaylee.</h1>
+
+      <div id="animation-container"></div>
+
+      <script>
+        const words = [
+          "UX/UI Designer",
+          "Web Developer",
+          "Product Designer",
+          // Add more fields as needed
+        ];
+      
+        function typeText(index, letterIndex) {
+          const container = document.getElementById('animation-container');
+          container.innerHTML = words[index].slice(0, letterIndex) + '<span id="cursor">|</span>';
+      
+          if (letterIndex < words[index].length) {
+            setTimeout(() => typeText(index, letterIndex + 1), 100);
+          } else {
+            setTimeout(() => deleteText(index, words[index].length), 1000);
+          }
+        }
+      
+        function deleteText(index, letterIndex) {
+          const container = document.getElementById('animation-container');
+          container.innerHTML = words[index].slice(0, letterIndex) + '<span id="cursor">|</span>';
+      
+          if (letterIndex > 0) {
+            setTimeout(() => deleteText(index, letterIndex - 1), 100);
+          } else {
+            // Move to the next word or loop back to the first word after a delay
+            setTimeout(() => {
+              container.innerHTML = '<span id="cursor">|</span>';
+              const nextIndex = (index + 1) % words.length;
+              typeText(nextIndex, 0);
+            }, 1000);
+          }
+        }
+      
+        // Start the animation
+        typeText(0, 0);
+      </script>
+      
+
       <h2>Human-Computer Interaction @ UC Irvine</h2>
       <button class="main__btn" id="scroll-to-carousel-wrapper">See my work</button>
     </div>

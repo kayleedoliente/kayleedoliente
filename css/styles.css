@@ -234,7 +234,7 @@
   }
 }
 
-/* Hero section CSS */
+/* main CSS */
 
 .main {
   background-image: linear-gradient(to bottom right, #f9f3ff, #fad5f5, #a6afff);
@@ -691,4 +691,19 @@ form button:hover {
   background-color: #a04ffd;
 }
 
-/* WORKS SECTION */
+/* animation styling */
+
+#animation-container {
+  font-size: 24px;
+  display: inline-block;
+}
+
+#cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}

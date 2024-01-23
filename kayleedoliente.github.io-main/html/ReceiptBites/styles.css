@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.introduction {
+    background-color: #f9f9f9;
+}
+
+.problem {
+    background-color: #f0f0f0;
+}
+
+/* Add styling for other sections */
+
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

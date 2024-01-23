@@ -1,0 +1,753 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #ffffff00;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  outline: 2px solid #eaeaea;
+}
+
+#navbar__links .active {
+  color: #f8f8f8;
+  background-color: #4f81bd;
+}
+
+/* Style the outline when the link is focused (e.g., when clicked or navigated to) */
+.navbar__links:focus {
+  color: #131313; /* Customize the color for the focused state */
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  max-width: 130vw;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+#navbar__logo {
+  background-color: #7b08ff;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.fa-gem {
+  margin-right: 0.5rem;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #7b08ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #7b08ff;
+  color: #fff;
+}
+
+.button:hover {
+  background: #3744ff;
+  transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+  color: #3744ff;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+    background: #131313;
+  }
+
+  .navbar__menu.active {
+    background: #f3f3f3;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 70vh;
+    font-size: 1.6rem;
+  }
+
+  #navbar__logo {
+    padding-left: 25px;
+  }
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #7b08ff;
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__btn {
+    padding-bottom: 2rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin: 0;
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Mobile Responsive */
+
+
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main__content h2 {
+    font-size: 2rem;
+  }
+
+  .main__content p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .main__btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}
+
+/* main CSS */
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+
+  /* Add a background image with linear gradient */
+  background-image: linear-gradient(to bottom right, #f9f3ff, #fad5f5, #a6afff);
+  background-size: 100%;
+  background-blend-mode: multiply;
+}
+
+
+.blob-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+
+.blob {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(170, 114, 255, 0.5); /* Adjust the color and opacity */
+  /*filter: blur(20px);  Adjust the blur effect */
+  animation: moveBlob linear infinite;
+}
+
+.blob:nth-child(2) {
+  background: #fad5f5; /* Set the second blob color */
+}
+
+.blob:nth-child(3) {
+  background: #a6afff; /* Set the third blob color */
+}
+
+@keyframes moveBlob {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+#work-section {
+  padding-top: 50px;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  z-index: 100%;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.main__content h1 {
+  font: 4rem;
+  font-size: 3rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #7b08ff 0%, #6f00ff 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.highlight {
+  color: #7b08ff;
+  font-weight: bold;
+}
+
+.main__content h2 {
+  font: 4rem;
+  background-color: #000;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #161616;
+}
+
+.main__btn {
+  font-size: 1rem;
+  background-image: linear-gradient(to top, #5b65f8 0%, #7b08ff 100%);
+  background-color: #7b08ff;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  /*transition: all 0.35s;*/
+  transition: background-color 0.35s;
+  outline: none;
+}
+
+.main__btn a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+.main__btn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #4837ff;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+*/
+
+.main__btn:hover {
+  color: #fff;
+  background-image: linear-gradient(to top, #5b6bf8 0%, #a008ff 100%)
+}
+
+.main__btn:hover:after {
+  width: 100%;
+}
+
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  height: 80%;
+  width: 80%;
+}
+
+/* AT A GLANCE SECTION */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+  position: inherit;
+  transition: transform 0.5s ease;
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-slide {
+  display: none;
+  float: left;
+  width: 100%;
+  padding-left: 20vh;
+  user-select: none;
+  animation: fade 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    min-width: 500px; /* Adjust this value to your preferred minimum width */
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+/* Style for the buttons container */
+.carousel-buttons {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for the buttons */
+.carousel-button {
+  background-color: #7b08ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 10px; /* Adjust the margin as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.carousel-button:hover {
+  background-color: #9e4aff;
+}
+
+/* Animation for swipe effect */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Case Studies Section CSS */
+/* Style for the case study container */
+* {
+  background-color: linear-gradient(to top, #4a23b6 0%, #7b08ff 100%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  padding: 20px;
+}
+
+/* Style for the case study content */
+.portfolio__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style for the case study text */
+.portfolio__text {
+  flex: 1;
+  padding: 20px;
+}
+
+.portfolio__text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.portfolio__text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Style for the case study image */
+.portfolio__image {
+  flex: 1;
+  align-self: right;
+  padding: 20px;
+}
+
+.portfolio__image img {
+  min-width: 100%;
+  height: auto;
+}
+
+/* Style for the case study container */
+.receipt-bites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  padding: 20px;
+}
+
+/* Style for the case study content */
+.receipt-bites__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style for the case study text */
+.receipt-bites__text {
+  flex: 1;
+  padding: 20px;
+}
+
+.receipt-bites__text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.receipt-bites__text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Style for the case study image */
+.receipt-bites__image {
+  flex: 1;
+  padding: 20px;
+}
+
+.receipt-bites__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Next case study */
+
+/* Style for the case study container */
+.sustidupe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  padding: 20px;
+}
+
+/* Style for the case study content */
+.sustidupe__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style for the case study text */
+.sustidupe__text {
+  flex: 1;
+  padding: 20px;
+}
+
+.sustidupe__text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sustidupe__text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Style for the case study image */
+.sustidupe__image {
+  flex: 1;
+  align-self: right;
+  padding: 20px;
+}
+
+.sustidupe__image img {
+  min-width: 100%;
+  height: auto;
+}
+
+/* Style for the buttons */
+.button {
+  display: inline-flex; /* Use inline-flex to center text both horizontally and vertically */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  width: 150px;
+  white-space: nowrap;
+  padding: 10px 20px;
+  margin-right: 3%;
+  background-color: #7b08ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    padding: 6px 12px; /* Further adjust padding for even smaller screens */
+    font-size: 12px; /* Further adjust font size for even smaller screens */
+  }
+}
+
+.button:hover {
+  background-color: #a04ffd;
+}
+
+/* Styles for titles/ separators */
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Adjust the height as needed */
+  background-color: #ffffff; /* Set the background color */
+}
+
+.separator__content {
+  text-align: center;
+}
+
+.separator__content h1 {
+  margin: 0;
+}
+
+/* Footer styles */
+footer {
+  background-color: #7b08ff20;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+
+footer a {
+  padding: 5%;
+}
+
+footer img {
+  width: 1.5rem; /* Adjust the size as needed */
+}
+
+/* Contact Me Styles */
+
+/* Style the main content sections */
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Style the contact form */
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #7b08ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #a04ffd;
+}
+
+/* animation styling */
+
+#animation-container {
+  font-size: 24px;
+  display: inline-block;
+}
+
+#cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}

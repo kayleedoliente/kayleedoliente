@@ -297,7 +297,7 @@
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  z-index: 100%;
+  z-index: 100;
   width: 100%;
   max-width: 1300px;
   padding: 0 50px;
@@ -516,7 +516,7 @@ video {
 /* Style for the case study image */
 .portfolio__image {
   flex: 1;
-  align-self: right;
+  align-self: flex-end;
   padding: 20px;
 }
 
@@ -609,7 +609,7 @@ video {
 /* Style for the case study image */
 .sustidupe__image {
   flex: 1;
-  align-self: right;
+  align-self: flex-end;
   padding: 20px;
 }
 

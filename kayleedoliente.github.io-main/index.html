@@ -1,156 +1,151 @@
 <!DOCTYPE html>
 
-<html>
-  <html lang="en">
-  <head>
-    <link rel="icon" href="https://icons8.com/icon/ISUiT4WYgBXg/k-key" type="image/x-icon">
+<html lang="en">
+    <head>
+      <link
+        rel="icon"
+        href="https://icons8.com/icon/ISUiT4WYgBXg/k-key"
+        type="image/x-icon"
+      >
 
-    <!-- Navbar highlights-->
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script>
-      $(function () {
-        $("a").each(function () {
-          if ($(this).prop("href") == window.location.href) {
-            $(this).addClass("active");
-            $(this).parents("li").addClass("active");
-          }
-        });
-      });
-    </script>
-
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaylee Doliente</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/9c35c567eb.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  </head>
-  <body>
-    <div id="nav-placeholder"></div>
-    <script>
-      $(function () {
-        $("#nav-placeholder").load("navbar/navbar.html");
-      });
-    </script>
-  </body>
-</html>
-
-<!-- Hero section -->
-<div class="main">
-  
-  <div class="main__container">
-    <div class="blob-container"></div>
-    
-    
-    <div class="main__content">
-      
-      <h1>Hey! I'm Kaylee.</h1>
-
-      <div id="animation-container"></div>
-
+      <!-- Navbar highlights-->
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
       <script>
-        const words = [
-          "UX/UI Designer",
-          "Web Developer",
-          "Product Designer",
-        ];
-      
-        function typeText(index, letterIndex) {
-          const container = document.getElementById('animation-container');
-          container.innerHTML = words[index].slice(0, letterIndex) + '<span id="cursor">|</span>';
-      
-          if (letterIndex < words[index].length) {
-            setTimeout(() => typeText(index, letterIndex + 1), 100);
-          } else {
-            setTimeout(() => deleteText(index, words[index].length), 1000);
-          }
-        }
-      
-        function deleteText(index, letterIndex) {
-          const container = document.getElementById('animation-container');
-          container.innerHTML = words[index].slice(0, letterIndex) + '<span id="cursor">|</span>';
-      
-          if (letterIndex > 0) {
-            setTimeout(() => deleteText(index, letterIndex - 1), 100);
-          } else {
-            // Move to the next word or loop back to the first word after a delay
-            setTimeout(() => {
-              container.innerHTML = '<span id="cursor">|</span>';
-              const nextIndex = (index + 1) % words.length;
-              typeText(nextIndex, 0);
-            }, 1000);
-          }
-        }
-      
-        // Start the animation
-        typeText(0, 0);
-
-
-
+        $(function () {
+          $("a").each(function () {
+            if ($(this).prop("href") == window.location.href) {
+              $(this).addClass("active");
+              $(this).parents("li").addClass("active");
+            }
+          });
+        });
       </script>
-      <h2>Human-Computer Interaction @ UC Irvine</h2>
-      <button class="main__btn" id="scroll-to-carousel-wrapper">See my work</button>
-    </div>
-  </div>
-</div>
 
-<div class="separator">
-  <div class="separator__content">
-  <h1>My Designs at a Glance</h1>
-  </div>
-</div>
-
-<!--Case Studies Section-->
-
-<body>
-
-  <!-- image carousel HTML -->
-  <div class="carousel-wrapper">
-  <div class="carousel-container">
-    <div class="carousel-slide">
-      <p>(1/2) BidKickz. A website created on Figma for bidding on shoes.</p>
-      <img src="images/bidkickz.png" alt="BidKickz quick glimpse photo.">
-    </div>
-    <div class="carousel-slide">
-      <p>(2/2) NatalieRose Music. A website showcase created on Figma for a local musician. </p>
-      <video controls autoplay loop>
-        <source src="images/natalierose.mov" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      
-    </div>
-  </div>
-  <div class="carousel-buttons">
-    <button id="prev-button" class="carousel-button">Back</button>
-    <button id="next-button" class="carousel-button">Next</button>
-  </div>
-
-  </div>
-
-
-
-
-  <footer>
-    <div id="footer-placeholder"></div>
-    <script>
-      $(function () {
-        $("#footer-placeholder").load("footer/footer.html");
-      });
-    </script>
-  </footer>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Kaylee Doliente</title>
+      <link rel="stylesheet" href="css/styles.css">
+      <script
+        src="https://kit.fontawesome.com/9c35c567eb.js"
+        crossorigin="anonymous"
+      ></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet"
+      >
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+      <div id="nav-placeholder"></div>
+      <script>
+        $(function () {
+          $("#nav-placeholder").load("navbar/navbar.html");
+        });
+      </script>
+    </body>
   
-<script src="js/smooth-scroll.js"></script>
-<script src="js/mobile-menu.js"></script>
-<script src="js/carousel.js"></script>
-</body>
+
+  <!-- Hero section -->
+  <div class="main">
+    <div class="main__container">
+      <div class="blob-container"></div>
+
+      <div class="main__content">
+        <h1>Hey! I'm Kaylee.</h1>
+
+        <div id="animation-container"></div>
+
+        <script>
+          const words = ["UX/UI Designer", "Web Developer", "Product Designer"];
+
+          function typeText(index, letterIndex) {
+            const container = document.getElementById("animation-container");
+            container.innerHTML =
+              words[index].slice(0, letterIndex) + '<span id="cursor">|</span>';
+
+            if (letterIndex < words[index].length) {
+              setTimeout(() => typeText(index, letterIndex + 1), 100);
+            } else {
+              setTimeout(() => deleteText(index, words[index].length), 1000);
+            }
+          }
+
+          function deleteText(index, letterIndex) {
+            const container = document.getElementById("animation-container");
+            container.innerHTML =
+              words[index].slice(0, letterIndex) + '<span id="cursor">|</span>';
+
+            if (letterIndex > 0) {
+              setTimeout(() => deleteText(index, letterIndex - 1), 100);
+            } else {
+              // Move to the next word or loop back to the first word after a delay
+              setTimeout(() => {
+                container.innerHTML = '<span id="cursor">|</span>';
+                const nextIndex = (index + 1) % words.length;
+                typeText(nextIndex, 0);
+              }, 1000);
+            }
+          }
+
+          // Start the animation
+          typeText(0, 0);
+        </script>
+        <h2>Human-Computer Interaction @ UC Irvine</h2>
+        <button class="main__btn" id="scroll-to-carousel-wrapper">
+          See my work
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator">
+    <div class="separator__content">
+      <h1>My Designs at a Glance</h1>
+    </div>
+  </div>
+
+  <!--Case Studies Section-->
+
+ 
+    <!-- image carousel HTML -->
+    <div class="carousel-wrapper">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <p>
+            (1/2) BidKickz. A website created on Figma for bidding on shoes.
+          </p>
+          <img src="images/bidkickz.png" alt="BidKickz quick glimpse photo.">
+        </div>
+        <div class="carousel-slide">
+          <p>
+            (2/2) NatalieRose Music. A website showcase created on Figma for a
+            local musician.
+          </p>
+          <video controls autoplay loop>
+            <source src="images/natalierose.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button id="prev-button" class="carousel-button">Back</button>
+        <button id="next-button" class="carousel-button">Next</button>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer-placeholder"></div>
+      <script>
+        $(function () {
+          $("#footer-placeholder").load("footer/footer.html");
+        });
+      </script>
+    </footer>
+
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/carousel.js"></script>
+  </body>
 </html>
